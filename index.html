@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="theme-color" content="#ff5a36">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Food-Map">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <title>Food-Map (Prototyp)</title>
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <header id="top">
+    <div class="top-row">
+      <div class="brand"><span class="logo">🍴</span><b>Food-Map</b></div>
+      <div class="count" id="count"></div>
+      <button id="filterBtn" class="icon-btn" aria-label="Filter öffnen">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+        <span>Filter</span><i id="filterBadge" hidden>0</i>
+      </button>
+    </div>
+    <div id="chips" class="chips" role="tablist" aria-label="Kategorien"></div>
+    <div class="banner">⚠️ Beispieldaten – noch keine echten Läden</div>
+  </header>
+
+  <button id="legendBtn" class="fab" aria-label="Legende" hidden></button>
+
+  <!-- Kompakte Karte unten -->
+  <section id="card" class="card" hidden></section>
+
+  <!-- Filter -->
+  <div id="scrim" class="scrim" hidden></div>
+  <section id="filterSheet" class="sheet" hidden>
+    <div class="grab"></div>
+    <h2>Filter</h2>
+    <div class="f-group">
+      <label class="switch-row"><span>Jetzt geöffnet</span><input type="checkbox" id="fOpen"><i></i></label>
+      <label class="switch-row"><span>Parkplatz vorhanden</span><input type="checkbox" id="fPark"><i></i></label>
+      <label class="switch-row"><span>Vegetarische Optionen</span><input type="checkbox" id="fVeg"><i></i></label>
+    </div>
+    <div class="f-group">
+      <div class="f-title">Art</div>
+      <div class="seg" id="fType"></div>
+    </div>
+    <div class="f-group">
+      <div class="f-title">Preis</div>
+      <div class="seg" id="fPrice"></div>
+    </div>
+    <div class="f-actions">
+      <button id="fReset" class="btn ghost">Zurücksetzen</button>
+      <button id="fDone" class="btn primary">Anzeigen</button>
+    </div>
+  </section>
+
+  <!-- Detailseite -->
+  <section id="detail" class="detail" hidden></section>
+
+  <script src="vendor/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

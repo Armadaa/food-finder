@@ -1,0 +1,17 @@
+{
+  "name": "Food-Map (Prototyp)",
+  "short_name": "Food-Map",
+  "description": "Alle Läden einer Kategorie übersichtlich auf einer Karte – Prototyp mit Beispieldaten.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff8f3",
+  "theme_color": "#ff5a36",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
